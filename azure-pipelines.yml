@@ -10,8 +10,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: sudo apt-get install sdkman
-  displayName: 'Install Sdkman'
+- script: curl -O https://piccolo.link/sbt-1.3.3.zip
+  displayName: 'Fetch sbt'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.

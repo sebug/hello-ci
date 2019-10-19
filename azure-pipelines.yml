@@ -17,6 +17,7 @@ steps:
   displayName: 'Unzip sbt'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    cd hello-ci
+    ../sbt/bin/sbt test
+    ls
+  displayName: 'Run sbt'

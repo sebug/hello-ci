@@ -10,8 +10,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: apt-get install sdkman
-  displayName: 'Install sbt'
+- script: sudo apt-get install sdkman
+  displayName: 'Install Sdkman'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.

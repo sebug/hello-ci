@@ -18,6 +18,5 @@ steps:
 
 - script: |
     cd hello-ci
-    ../sbt/bin/sbt test
-    ls
+    ../sbt/bin/sbt test && ls
   displayName: 'Run sbt'

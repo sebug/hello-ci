@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: curl -O https://piccolo.link/sbt-1.3.3.zip
+- script: curl -L -O https://piccolo.link/sbt-1.3.3.zip
   displayName: 'Fetch sbt'
 
 - script: |

@@ -13,6 +13,9 @@ steps:
 - script: curl -L -O https://piccolo.link/sbt-1.3.3.zip
   displayName: 'Fetch sbt'
 
+- script: unzip sbt*.zip
+  displayName: 'Unzip sbt'
+
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml

@@ -14,11 +14,13 @@ steps:
   displayName: 'Pull the sbt Docker image'
 
 - script: |
-    cd hello-ci
-    docker run --rm -v $PWD:/app -w /app mozilla/sbt sbt test
+    docker run --rm -v hello-ci:/app -w /app mozilla/sbt sbt test
   displayName: 'Run sbt test'
 
 - script: |
-    cd hello-ci
-    docker run --rm -v $PWD:/app -w /app mozilla/sbt sbt package
+    docker run --rm -v hello-ci:/app -w /app mozilla/sbt sbt package
   displayName: 'Run sbt package'
+
+- script: |
+    ls hello-ci/target/scala-*/
+  displayName: 'Listing output files'

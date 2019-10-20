@@ -18,9 +18,10 @@ steps:
   displayName: 'Run sbt test'
 
 - script: |
+    mkdir -p hello-ci/target
     docker run --rm -v hello-ci:/app -w /app mozilla/sbt sbt package
   displayName: 'Run sbt package'
 
 - script: |
-    ls hello-ci/project
+    ls hello-ci/package
   displayName: 'Listing output files'

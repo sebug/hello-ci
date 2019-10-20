@@ -10,13 +10,10 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: curl -L -O https://piccolo.link/sbt-1.3.3.zip
-  displayName: 'Fetch sbt'
-
-- script: unzip sbt*.zip
-  displayName: 'Unzip sbt'
+- script: docker pull mozilla/sbt
+  displayName: 'Pull the sbt Docker image'
 
 - script: |
     cd hello-ci
-    ../sbt/bin/sbt test && ls
+    docker run -it --rm -v $PWD:/app -w /app mozilla/sbt sbt test
   displayName: 'Run sbt'

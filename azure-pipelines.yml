@@ -23,5 +23,5 @@ steps:
   displayName: 'Run sbt package'
 
 - script: |
-    ls hello-ci/target
+    ls hello-ci/project/target
   displayName: 'Listing output files'

@@ -22,5 +22,5 @@ steps:
   displayName: 'Run sbt package'
 
 - script: |
-    ls hello-ci/target/scala-*/
+    ls .
   displayName: 'Listing output files'
